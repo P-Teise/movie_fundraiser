@@ -17,6 +17,8 @@ while name != "xxx" and count < max_tickets:
 
 if count == max_tickets:
     print("You have sold all the available tickets!")
+elif count == 1:
+    print("You have 1 seat left")
 else:
     print("You have sold {} tickets. \n"
           "There are {} places still available"
