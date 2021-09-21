@@ -50,7 +50,7 @@ def int_check(question, low_num, high_num):
 
 count = 0
 max_tickets = 5
-name =""
+name = ""
 
 while name != "xxx" and count < max_tickets:
 
@@ -68,7 +68,11 @@ while name != "xxx" and count < max_tickets:
     # Get details...
     name = not_blank("Name: ", "Please enter your name")
 
-     # Get age (between 12 and 130)
+    # end of loop if exit code is input
+    if name == "xxx":
+        break
+
+    # Get age (between 12 and 130)
     age = int_check("Age: ", 12, 130)
 
     count += 1
