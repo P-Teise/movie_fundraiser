@@ -19,7 +19,7 @@ while name != "xxx" and count < max_tickets:
     # tells user how many tickets have been sold and how many tickets are left
     elif count < 4:
         print("You have sold {} tickets. \n"
-              "There are {} places still available"
+              "There are {} seats still available"
               .format(count, max_tickets - count))
     # grammar corrected to emphasize only ONE seat is left
     else:
