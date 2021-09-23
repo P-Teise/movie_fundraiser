@@ -16,12 +16,11 @@ def not_blank(question, error_message):
             print(error_message)
 
 
-# checks for an integer between two values
+# checks for an integer more than 0
+def int_check(question):
 
-
-def int_check(question, low_num, high_num):
-    error = "Please enter a whole number between {} " \
-            "and {}".format(low_num, high_num)
+    error = "Please enter a whole number between 12 " \
+            "and 130"
 
     valid = False
     while not valid:
@@ -30,10 +29,10 @@ def int_check(question, low_num, high_num):
         try:
             response = int(input(question))
 
-            if low_num <= response <= high_num:
-                return response
-            else:
+            if response <= 0:
                 print(error)
+            else:
+                return response
 
         # if integer is not entered, display an error message
         except ValueError:
@@ -73,9 +72,17 @@ while name != "xxx" and count < max_tickets:
         break
 
     # Get age (between 12 and 130)
-    age = int_check("Age: ", 12, 130)
+    age = int_check("Age: ")
 
     count += 1
+
+    # check that age is valid ...
+    if age < 12:
+        print("Sorry you are too young for this movie")
+        continue
+    elif age > 130:
+        print("That is very old - it looks like a mistake")
+        continue
 
 # End of tickets loop
 
