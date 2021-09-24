@@ -59,7 +59,7 @@ while name != "xxx" and count < max_tickets:
 
     # tells user how many tickets have been sold and how many tickets are left
     elif count < max_tickets - 1:
-        print("You have sold {} tickets. There are {} places still available" .format(count, max_tickets - count))
+        print("You have sold {} tickets. There are {} places available" .format(count, max_tickets - count))
     # warns user only ONE seat is left
     else:
         print("You have 1 seat left")
@@ -74,8 +74,6 @@ while name != "xxx" and count < max_tickets:
     # Get age (between 12 and 130)
     age = int_check("Age: ")
 
-    count += 1
-
     # check that age is valid ...
     if age < 12:
         print("Sorry you are too young for this movie")
@@ -83,6 +81,8 @@ while name != "xxx" and count < max_tickets:
     elif age > 130:
         print("That is very old - it looks like a mistake")
         continue
+
+    count += 1
 
 # End of tickets loop
 
