@@ -46,20 +46,22 @@ def int_check(question):
 # initialise loop so that it runs at least once
 
 # Get name (can't be blank)
-
-count = 0
-max_tickets = 5
+MAX_TICKETS = 5
 name = ""
+ticket_count = 0
+ticket_sales = 0
 
-while name != "xxx" and count < max_tickets:
+
+
+while name != "xxx" and ticket_count < MAX_TICKETS:
 
     # tells user how many seats are left
-    if count == max_tickets:
+    if ticket_count == MAX_TICKETS:
         print("You have sold all the available tickets!")
 
     # tells user how many tickets have been sold and how many tickets are left
-    elif count < max_tickets - 1:
-        print("You have sold {} tickets. There are {} places available" .format(count, max_tickets - count))
+    elif ticket_count < MAX_TICKETS - 1:
+        print("You have sold {} tickets. There are {} places available" .format(ticket_count, MAX_TICKETS - ticket_count))
     # warns user only ONE seat is left
     else:
         print("You have 1 seat left")
@@ -82,8 +84,20 @@ while name != "xxx" and count < max_tickets:
         print("That is very old - it looks like a mistake")
         continue
 
-    count += 1
+    if age < 16:
+        ticket_price = 7.50
+    elif age >= 65:
+        ticket_price = 6.50
+    else:
+        ticket_price = 10.50
+
+    ticket_count += 1
+    ticket_sales += ticket_price
 
 # End of tickets loop
 
 # calculate profits etc.
+ticket_profit = ticket_sales - (5 * ticket_count)
+print("Ticket profit: ${:.2f}".format(ticket_profit))
+
+
