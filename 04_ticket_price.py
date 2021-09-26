@@ -12,11 +12,17 @@ while name != "xxx":
     age = int(input("Age: "))   # replace with function
 
     if age < 16:
-        print("That ticket costs $7.50")
+        ticket_price = 7.50
     elif age >= 65:
-        print("That ticket costs $6.50")
+        ticket_price = 6.50
     else:
-        print("That ticket costs $10.50")
+        ticket_price = 10.50
 
+    profit_made = ticket_price - 5
+    profit += profit_made
+
+    print("{} : ${:.2f}".format(name, ticket_price))
+
+print("Profit from ticket: ${:.2f}".format(profit))
 
 
