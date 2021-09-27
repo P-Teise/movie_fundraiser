@@ -61,7 +61,7 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
 
     # tells user how many tickets have been sold and how many tickets are left
     elif ticket_count < MAX_TICKETS - 1:
-        print("You have sold {} tickets. There are {} places available" .format(ticket_count, MAX_TICKETS - ticket_count))
+        print("You have sold {} tickets. You have {} places available" .format(ticket_count, MAX_TICKETS - ticket_count))
     # warns user only ONE seat is left
     else:
         print("You have 1 seat left")
