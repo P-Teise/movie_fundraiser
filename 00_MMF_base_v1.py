@@ -18,7 +18,6 @@ def not_blank(question, error_message):
 
 # checks for an integer more than 0
 def int_check(question):
-
     error = "Please enter a whole number between 12 " \
             "and 130"
 
@@ -51,8 +50,6 @@ name = ""
 ticket_count = 0
 ticket_sales = 0
 
-
-
 while name != "xxx" and ticket_count < MAX_TICKETS:
 
     # tells user how many seats are left
@@ -61,7 +58,7 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
 
     # tells user how many tickets have been sold and how many tickets are left
     elif ticket_count < MAX_TICKETS - 1:
-        print("You have sold {} tickets. You have {} places available" .format(ticket_count, MAX_TICKETS - ticket_count))
+        print("You have sold {} tickets. You have {} places available".format(ticket_count, MAX_TICKETS - ticket_count))
     # warns user only ONE seat is left
     else:
         print("You have 1 seat left")
@@ -99,5 +96,3 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
 # calculate profits etc.
 ticket_profit = ticket_sales - (5 * ticket_count)
 print("Ticket profit: ${:.2f}".format(ticket_profit))
-
-
